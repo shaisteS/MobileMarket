@@ -61,6 +61,8 @@ public class MainActivity extends ActionBarActivity {
             getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         }
 
+        //Start here
+
 
         ButterKnife.inject(this);
         setSupportActionBar(toolbar);
