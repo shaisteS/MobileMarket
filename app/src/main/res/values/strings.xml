@@ -10,4 +10,9 @@
     <string name="search">خرید</string>
     <string name="myFiles">تصاویر</string>
     <string name="shered">اخبار</string>
+    <array name="productName">
+        <item>مبلمان</item>
+        <item> میز ناهارخوری</item>
+        <item>کمد</item>
+    </array>
 </resources>

@@ -27,11 +27,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.readystatesoftware.systembartint.SystemBarTintManager;
@@ -39,7 +43,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     @InjectView(R.id.toolbar)
     Toolbar toolbar;
@@ -62,7 +66,6 @@ public class MainActivity extends ActionBarActivity {
         }
 
         //Start here
-
 
         ButterKnife.inject(this);
         setSupportActionBar(toolbar);
@@ -97,7 +100,7 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_contact:
-                QuickContactFragment.newInstance().show(getSupportFragmentManager(), "QuickContactFragment");
+                //QuickContactFragment.newInstance().show(getSupportFragmentManager(), "QuickContactFragment");
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -117,7 +120,6 @@ public class MainActivity extends ActionBarActivity {
             getSupportActionBar().setBackgroundDrawable(td);
             td.startTransition(200);
         }
-
         oldBackground = ld;
         currentColor = newColor;
     }
